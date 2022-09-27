@@ -220,81 +220,47 @@
     <!-- Contact -->
     <section id="contact">
       <div class="container">
-        <div class="row text-center">
+        <div class="row text-center mb-3">
           <div class="col">
-            <h2><strong>Kontak Saya</strong></h2>
+            <h2>Kontak Saya</h2>
           </div>
         </div>
         <div class="row justify-content-center">
           <div class="col-md-6">
-            <div
-              class="alert alert-success alert-dismissible fade show d-none my-alert"
-              role="alert"
-            >
-              <strong>Terimakasih!</strong> pesan kamu sudah terkirim
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="alert"
-                aria-label="Close"
-              ></button>
+            <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+              <strong>Terimakasih!</strong> Pesan anda telah terkirim.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
-            <form name="portfolio2-kontak-form">
+            <form name="KONTAK-FORM-PORTOFOLIO">
               <div class="mb-3">
                 <label for="name" class="form-label">Nama</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="name"
-                  aria-describedby="name"
-                  name="nama"
-                />
+                <input type="text" class="form-control" id="name" aria-describedby="name" name="nama">
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  aria-describedby="email"
-                  name="email"
-                />
+                <input type="email" class="form-control" id="email" aria-describedby="email" name="email">
               </div>
               <div class="mb-3">
-                <label for="pesan" class="form-label">Pesan</label>
-                <textarea
-                  class="form-control"
-                  id="pesan"
-                  rows="3"
-                  name="pesan"
-                ></textarea>
+                <label for="pesan" class="form-label"> Pesan</label>
+                <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
               </div>
-              <button type="submit" class="btn btn-success btn-kirim">
-                Kirim
-              </button>
-              <button
-                class="btn btn-success btn-loading d-none"
-                type="button"
-                disabled
-              >
-                <span
-                  class="spinner-grow spinner-grow-sm"
-                  role="status"
-                  aria-hidden="true"
-                ></span>
+              <button type="submit" class="btn btn-primary btn-kirim">Kirim</button>
+              <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                 Loading...
               </button>
             </form>
           </div>
         </div>
       </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0d0729" fill-opacity="1" d="M0,192L48,165.3C96,139,192,85,288,90.7C384,96,480,160,576,170.7C672,181,768,139,864,117.3C960,96,1056,96,1152,101.3C1248,107,1344,117,1392,122.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
     </section>
     <!-- Akhir Contact -->
 
     <!-- Footer -->
     <footer
       style="background-color: #0d0729"
-      class="text-white text-center pb-3"
+      class="text-white text-center pb-5"
     >
       <p>
         Created by
@@ -313,18 +279,30 @@
     ></script>
 
     <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbz78lg_9TBooyBNyoAKvSMFx_3eCcSltvtL3k75Raca-Fs22BJY0vZ8HSrcUwqZEd24/exec";
-      const form = document.forms["portfolio2-kontak-form"];
-      const btnKirim = document.querySelector(".btn-kirim");
-      const btnLoading = document.querySelector(".btn-loading");
-      const myAlert = ducument.querySelector(".my-alert");
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwNQzQB-u-wzFMTdoYoVOxxa_GC0SXWSxbX-W1FauongKVekdaIzSqIN8m9sMI3ylcM/exec';
+      const form = document.forms['KONTAK-FORM-PORTOFOLIO'];
+      const btnKirim = document.querySelector('.btn-kirim');
+      const btnLoading = document.querySelector('.btn-loading');
+      const myAlert = document.querySelector('.my-alert');
 
-      form.addEventListener("submit", (e) => {
+      form.addEventListener('submit', (e) => {
         e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => console.log("Success!", response))
-          .catch((error) => console.error("Error!", error.message));
+        // ketika tombol submit diklik
+        // tampilkan tombol loading, hilangkan tombol kirim
+        btnLoading.classList.toggle('d-none');
+        btnKirim.classList.toggle('d-none');
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then((response) => {
+            // tampilkan tombol kirim, hilangkan tombol loading
+            btnLoading.classList.toggle('d-none');
+            btnKirim.classList.toggle('d-none');
+            // tampilkan alert
+            myAlert.classList.toggle('d-none');
+            // reset formnya
+            form.reset();
+            console.log('Success!', response);
+          })
+          .catch((error) => console.error('Error!', error.message));
       });
     </script>
   </body>
