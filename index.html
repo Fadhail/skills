@@ -14,6 +14,9 @@
       crossorigin="anonymous"
     />
 
+    <!--AOS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
 
@@ -99,13 +102,13 @@
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <h5><strong>Profil dan Edukasi</strong></h5>
-          <div class="col-md-4">
+          <div data-aos="zoom-in" data-aos-duration="500"><h5><strong>Profil dan Edukasi</strong></h5></div>
+          <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000">
             Halo, Nama saya Mochammad Fadhail Fijratullah, umur saya 17 tahun,
             saya kelas 3 SMA. Saya dapat bekerja keras, bekerja sebagai tim, dan
             saya senang mempelajari hal-hal baru.
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
             <strong>2009-2011</strong>=TK Raudhatul Athfal YA IBNA,
             <strong>2011-2017</strong>=SDN Cibabat Mandiri 5,
             <strong>2017-2020</strong>=SMPN 3 Cimahi,
@@ -131,20 +134,20 @@
             <ul>
               <div class="row text-center mb-3">
                 <div class="skill"><h2><strong>Skills</strong></h2></div>
-                <p>
+                <div data-aos="flip-left" data-aos-duration="700"><p>
                   Premier Pro<br />
                   <progress min="0" max="100" value="75"></progress>
-                </p>
+                </p></div>
                 <br />
-                <p>
+                <div data-aos="flip-left" data-aos-duration="700" data-aos-delay="200"><p>
                   After Effect<br />
                   <progress min="0" max="100" value="35"></progress>
-                </p>
+                </p></div>
                 <br />
-                <p>
+                <div data-aos="flip-left" data-aos-duration="700" data-aos-delay="400"><p>
                   Photoshop<br />
                   <progress min="0" max="100" value="80"></progress>
-                </p>
+                </p></div>
               </div>
             </ul>
           </div>
@@ -165,11 +168,11 @@
       <div class="container">
         <div class="row text-center mb-2">
           <div class="col">
-            <div class="project"><h2><strong>Projects</strong></h2></div>
+            <div class="project" data-aos="zoom-in-up"><h2><strong>Projects</strong></h2></div>
           </div>
         </div>
-        <div class="row margin-center">
-          <div class="col-md-4 mb-3">
+        <div class="row margin-center" >
+          <div class="col-md-4 mb-3" data-aos="zoom-in" data-aos-duration="500">
             <div class="card">
               <video controls>
                 <source src="Video/Test1.mp4" />
@@ -179,7 +182,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="200">
             <div class="card">
               <video controls>
                 <source src="Video/After Movie.mp4" />
@@ -189,7 +192,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="400">
             <div class="card">
               <video controls>
                 <source src="Video/After Movie.mp4" />
@@ -199,7 +202,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="600">
             <div class="card">
                 <img src="Foto/monyet.jpg" class="card-img-top" alt="Project" />
               <div class="card-body">
@@ -207,7 +210,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="800">
             <div class="card">
               <img src="Foto/mf.jpg" class="card-img-top" alt="Project" />
               <div class="card-body">
@@ -232,7 +235,7 @@
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col">
-            <div class="kontak"><h2><strong>Kontak Saya</strong></h2></div>
+            <div class="kontak" data-aos="zoom-in-up"><h2><strong>Kontak Saya</strong></h2></div>
           </div>
         </div>
         <div class="row justify-content-center">
@@ -242,19 +245,19 @@
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
             <form name="KONTAK-FORM-PORTOFOLIO">
-              <div class="mb-3">
+              <div class="mb-3" data-aos="fade-down">
                 <label for="name" class="form-label">Nama</label>
                 <input type="text" class="form-control" id="name" aria-describedby="name" name="nama">
               </div>
-              <div class="mb-3">
+              <div class="mb-3" data-aos="zoom-in">
                 <label for="email" class="form-label">Email</label>
                 <input type="email" class="form-control" id="email" aria-describedby="email" name="email">
               </div>
-              <div class="mb-3">
+              <div class="mb-3" data-aos="fade-up">
                 <label for="pesan" class="form-label"> Pesan</label>
                 <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
               </div>
-              <button type="submit" class="btn btn-primary btn-kirim">Kirim</button>
+              <div data-aos="zoom-in"><button type="submit" class="btn btn-primary btn-kirim">Kirim</button></div>
               <button class="btn btn-primary btn-loading d-none" type="button" disabled>
                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                 Loading...
@@ -287,6 +290,11 @@
       integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbwNQzQB-u-wzFMTdoYoVOxxa_GC0SXWSxbX-W1FauongKVekdaIzSqIN8m9sMI3ylcM/exec';

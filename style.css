@@ -87,7 +87,7 @@ body {
 }
 
 .project {
-  position: relative;
+  position: inherit;
   left: 50%;
   right: 50%;
   transform: translate(-50%, -50%);
@@ -118,7 +118,7 @@ body {
 }
 
 .kontak {
-  position: relative;
+  position: inherit;
   left: 50%;
   right: 50%;
   transform: translate(-50%, -50%);
